@@ -19,7 +19,8 @@ body {
 }
 
 .card.outline {
-  border: 0.15em dashed #202d7a;
+  /* border: 0.15em dashed #202d7a; */
+  border: 0.1.5em wavy #202d7a;
 }
 
 .card.shadow {

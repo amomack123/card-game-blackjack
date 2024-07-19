@@ -1,0 +1,46 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and filters -->
+  <defs>
+    <!-- Wood texture gradient -->
+    <linearGradient id="woodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+    <!-- 3D effect filter -->
+    <filter id="3dEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Wood grain pattern -->
+    <pattern id="grainPattern" patternUnits="userSpaceOnUse" width="10" height="10">
+      <path d="M0 0 L10 10 M10 0 L0 10" stroke="#A0522D" stroke-width="0.5"/>
+    </pattern>
+    <!-- Medullary rays and mineral streaks -->
+    <pattern id="raysPattern" patternUnits="userSpaceOnUse" width="200" height="200">
+      <line x1="0" y1="0" x2="200" y2="200" stroke="#7D4E20" stroke-width="2" stroke-opacity="0.3"/>
+      <line x1="200" y1="0" x2="0" y2="200" stroke="#7D4E20" stroke-width="2" stroke-opacity="0.3"/>
+      <line x1="0" y1="100" x2="200" y2="100" stroke="#5D3A1A" stroke-width="1" stroke-opacity="0.2"/>
+      <line x1="100" y1="0" x2="100" y2="200" stroke="#5D3A1A" stroke-width="1" stroke-opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Dark Green Board -->
+  <path d="M0,0 L800,0 L800,900 Q900,900 0,300 Z" fill="#006400"/>
+
+  <!-- Top Brown Table Side with texture and 3D effect -->
+  <path d="M0,250 Q400,450 800,250 L800,500 L0,350 Z" fill="url(#woodGradient)" filter="url(#3dEffect)"/>
+
+  <!-- Bottom Brown Table Side for surface area -->
+  <path d="M0,300 Q400,500 800,300 L800,400 L0,400 Z" fill="url(#woodGradient)" filter="url(#3dEffect)"/>
+
+  <!-- Applying wood grain and medullary rays pattern -->
+  <rect x="0" y="250" width="800" height="100" fill="url(#grainPattern)" fill-opacity="0.2"/>
+  <rect x="0" y="250" width="800" height="100" fill="url(#raysPattern)" fill-opacity="0.1"/>
+  <rect x="0" y="300" width="800" height="100" fill="url(#grainPattern)" fill-opacity="0.2"/>
+  <rect x="0" y="300" width="800" height="100" fill="url(#raysPattern)" fill-opacity="0.1"/>
+</svg>

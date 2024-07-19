@@ -1,6 +1,6 @@
 body {
   background: radial-gradient(circle, #006400, #004d00);
-  background-image: url('/Users/amogh/code/ga/projects/card-game-starter-code/css/background.svg');
+  background-image: url('background.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

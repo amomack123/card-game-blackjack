@@ -4,7 +4,7 @@
 
 Here’s an image that illustrates something about my project:
 
-![Diagram](/Users/amogh/code/ga/projects/card-game-starter-code/Screenshot?raw=true "Diagram of the project")
+![Diagram](/Logo.png?raw=true "Diagram of the project")
 
 
 
